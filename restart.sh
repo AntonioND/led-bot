@@ -20,4 +20,4 @@ cd ..
 
 # Comment the following lines if you don't want to use the HTML sever
 cd webserver
-nohup ./run.py &
+nohup sudo -u pi ./run.py &
