@@ -1,0 +1,97 @@
+<!--
+SPDX-License-Identifier: MIT
+
+Copyright (c) 2020, Antonio Niño Díaz <antonio_nd@outlook.com>
+-->
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <style>
+.submit-base {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition-duration: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.submit-base:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  opacity: 1;
+}
+
+.submit-off { background-color: #101010 }
+
+.submit-rainbow {
+  background-image: linear-gradient(to right, #FF0000, #B4B400, #00FF00, #00B4B4, #0000FF);
+}
+
+.submit-hue {
+  background-image: linear-gradient(to bottom right, #FF0000, #B4B400, #00FF00);
+}
+
+.submit-sparkles {
+  background-image: linear-gradient(to bottom, #00FF00, #00B4B4, #0000FF);
+}
+
+.submit-red { background-color: #FF0000 }
+.submit-green { background-color: #00FF00 }
+.submit-blue { background-color: #0000FF }
+.submit-yellow { background-color: #FFFF00; color: black; }
+.submit-cyan { background-color: #00FFFF; color: black; }
+.submit-magenta { background-color: #FF00FF; color: black; }
+.submit-white { background-color: #FFFFFF; color: black; }
+
+.submit-normal { background-color: #202020; border-radius: 10%; }
+.submit-slow { background-color: #808080; border-radius: 10%; color: black; }
+
+.submit-reboot { background-color: #101010; border-radius: 50%; }
+.submit-shutdown { background-color: #101010; border-radius: 50%; }
+    </style>
+  </head>
+  <body style="text-align:center">
+    <form method="post" action="/">
+      <input type="submit" class="submit-base submit-off" value="Off" name="Off"/>
+    </form>
+    </br>
+    <form method="post" action="/">
+      <input type="submit" class="submit-base submit-rainbow" value="Rainbow" name="Rainbow"/>
+      <input type="submit" class="submit-base submit-hue" value="Hue" name="Hue"/>
+      <input type="submit" class="submit-base submit-sparkles" value="Sparkles" name="Sparkles"/>
+    </form>
+    </br>
+    <form method="post" action="/">
+      <input type="submit" class="submit-base submit-red" value="Red" name="Red"/>
+      <input type="submit" class="submit-base submit-green" value="Green" name="Green"/>
+      <input type="submit" class="submit-base submit-blue" value="Blue" name="Blue"/>
+    </form>
+    <form method="post" action="/">
+      <input type="submit" class="submit-base submit-yellow" value="Yellow" name="Yellow"/>
+      <input type="submit" class="submit-base submit-cyan" value="Cyan" name="Cyan"/>
+      <input type="submit" class="submit-base submit-magenta" value="Magenta" name="Magenta"/>
+    </form>
+    <form method="post" action="/">
+      <input type="submit" class="submit-base submit-white" value="White" name="White"/>
+    </form>
+    </br>
+    <form method="post" action="/">
+      <input type="submit" class="submit-base submit-normal" value="Normal" name="Normal"/>
+      <input type="submit" class="submit-base submit-slow" value="Slow" name="Slow"/>
+    </form>
+    </br>
+    </br>
+    </br>
+    </br>
+    <form method="post" action="/">
+      <input type="submit" class="submit-base submit-reboot" value="Reboot" name="Reboot"/>
+      <input type="submit" class="submit-base submit-shutdown" value="Shutdown" name="Shutdown"/>
+    </form>
+  </body>
+</html>
