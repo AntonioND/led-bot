@@ -1,8 +1,12 @@
-Raspberry Pi remote LED bot
-===========================
+Smart LED lamp (Raspberry Pi + Unicorn HAT)
+===========================================
 
 This repository contains a Telegram bot and a HTML server that can be used to
 remotely control the lights of a `Unicorn HAT`_ connected to a Raspberry Pi.
+
+This is a video that shows it in action:
+
+https://www.youtube.com/watch?v=xjQCvFdkGJw
 
 Both the Telegram bot and the HTML server can control the lights and don't need
 the other one. If you don't want one of them, edit the file ``restart.sh`` to
