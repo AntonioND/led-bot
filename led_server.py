@@ -12,7 +12,7 @@ import socket
 import sys
 import time
 
-from random import randint
+from random import randint, uniform
 
 import unicornhat as unicorn
 
@@ -161,6 +161,31 @@ while True:
                 v = max(0, min(255, v))
                 unicorn.set_pixel(x, y, int(v), int(v), int(v))
         unicorn.show()
+    elif CURRENT_MODE == b'fire':
+        if i > 3:
+            i = 0;
+        else:
+            i = i + 1
+
+        if i == 0:
+            for y in range(0, height):
+                for x in range(0, width):
+                    low_step = max((height - y - 1.2) / height, 0)
+                    mid_step = max((height - y - 1) / height, 0)
+                    high_step = max((height - y) / height, 0)
+
+                    x_center = 1.0 - abs(((width / 2) - x - 0.5) / (width / 2))
+
+                    v = uniform(mid_step, high_step)
+
+                    r = v * math.sqrt(math.sqrt(x_center))
+                    g = v * low_step * x_center
+
+                    r = int(r * 255)
+                    g = int(g * 255)
+                    b = int(0)
+                    unicorn.set_pixel(x, y, r, g, b)
+            unicorn.show()
     elif CURRENT_MODE == b'sparkles':
         x = randint(0, width - 1)
         y = randint(0, height - 1)

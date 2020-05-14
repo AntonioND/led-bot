@@ -28,7 +28,7 @@ def index():
 
         commands = [
             'Off',
-            'Rainbow', 'Hue', 'Sparkles',
+            'Rainbow', 'Hue', 'Sparkles', 'Fire',
             'Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'White',
             'Normal', 'Slow',
             'Reboot', 'Shutdown'

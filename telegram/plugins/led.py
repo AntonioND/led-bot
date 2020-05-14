@@ -20,7 +20,7 @@ async def execute(bot, msg, chat_id, args, username):
         if command == "help":
             await bot.sendMessage(chat_id,
                 '/led off\n'
-                '/led {rainbow,hue,sparkles}\n'
+                '/led {rainbow,hue,sparkles,fire}\n'
                 '/led {red,green,blue,yellow,cyan,white}\n'
                 '/led {normal,slow}\n'
                 '/led {reboot,shutdown}'
