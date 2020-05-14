@@ -51,6 +51,13 @@ speed_multiplier = 1.0
 
 while True:
 
+    # Wrap variables around (so that we don't lose accuracy)
+
+    if i > (60 * math.pi): # 60 is a multiple of 2, 3, 4, 5, 6
+        i = i - (60 * math.pi)
+    if h > (60 * math.pi):
+        h = h - (60 * math.pi)
+
     # Check server status
 
     readable, writable, errored = select.select(read_list, [], [], 0)
@@ -91,15 +98,11 @@ while True:
         unicorn.show()
     elif CURRENT_MODE == b'hue':
         i = i + 0.1 * speed_multiplier
-        h = h + 0.001 * speed_multiplier
+        h = h + 0.0009 * speed_multiplier
         for y in range(height):
             for x in range(width):
                 v = math.cos((x + y + i) / 4.0) * 0.25 + 0.75
                 (r, g, b) = colorsys.hsv_to_rgb(h, 1.0, v)
-                #v = math.cos((x + y + i) / 4.0) * 64.0 + 192.0
-                #r = v * math.sin(h + (((2 * math.pi) / 3) * 1))
-                #g = v * math.sin(h + (((2 * math.pi) / 3) * 2))
-                #b = v * math.sin(h + (((2 * math.pi) / 3) * 3))
                 r = max(0, min(255, r * 255))
                 g = max(0, min(255, g * 255))
                 b = max(0, min(255, b * 255))
